@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import GlobalStyles from "./components/styles/GlobalStyles";
+
+//components
+import Header from "./components/pages/header";
+import Science from "./components/pages/science";
+import TokenFeatures from "./components/pages/tokenFeatures";
+import Roadmap from "./components/pages/roadmap";
+import Topbar from "./components/navbar/topbar";
+import Footer from "./components/footer/footer";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <Topbar />
+      <Header />
+      <Science />
+      <TokenFeatures />
+      <Roadmap />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
